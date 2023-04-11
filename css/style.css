@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: 'Hind', sans-serif;
+}
+header{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+#navPortfolio .nav-link::after{
+    content: "";
+    /* affter la the inline */
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background-color: #35a22c;
+    transition: all 0.5s;
+}
+#navPortfolio .nav-link:hover::after{
+    width: 100%;
+}
+#navPortfolio .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+#navPortfolio .active .nav-link{
+    color: #35a22c;
+}
+#navPortfolio .active::after{
+    width: 100%;
+}
+#porCarousel .carousel-item>img{
+    height: 100vh;
+    object-fit: cover;
+}
+#porCarousel .carousel-caption {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+}
+#porCarousel .carousel-indicators{
+    bottom: 200px;
+}
+#porCarousel .carousel-indicators li{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+#porCarousel.carousel-indicators li.active {
+    background-color:#35a22c;
+}
+.pd-section{
+    padding: 100px 0;
+}
+.achievement{
+    background-image: url(../img/memphis_3.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+.achievement__left{
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    padding: 45px;
+    backdrop-filter: blur(10px);
+}
+@media screen and (max-width:992px) {
+    header .navbar-toggler{
+        background-color: #35a22c;
+    }
+    #navPortfolio{
+        background-color: white;
+    }
+    
+    #navPortfolio .nav-link{
+        color: #35a22c;
+    }
+    #navPortfolio .nav-link:hover{
+        background-color: #35a22c;
+        
+    }
+    #navPortfolio .nav-item:hover .nav-link{
+        color: white;
+    }
+    #navPortfolio .nav-link::after{
+        display: none;
+    }
+    .productPortforlio .porforlio__col{
+        margin-top: 20px;
+    }
+}
