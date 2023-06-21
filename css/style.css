@@ -75,6 +75,9 @@ header{
     header .navbar-toggler{
         background-color: #35a22c;
     }
+    .fa-solid{
+        color: #35a22c;
+    }
     #navPortfolio{
         background-color: white;
     }
